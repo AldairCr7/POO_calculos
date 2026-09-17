@@ -67,7 +67,15 @@ public class Calculos {
      * @return texto invertida
      */
     String invertir(String texto) {
-        throw new UnsupportedOperationException("En construcción.");
+        if (texto == null) {
+            return null;
+        }
+        String[] palabras = texto.split(" ");
+        StringBuilder resultado = new StringBuilder();
+        for (String palabra : palabras) {
+            resultado.append(new StringBuilder(palabra).reverse()).append(" ");
+        }
+        return resultado.toString().trim();
     }
 
 }
