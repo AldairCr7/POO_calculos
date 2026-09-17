@@ -21,7 +21,10 @@ public class Calculos {
      * @return valor absoluto
      */
     float absoluto(float num) {
-        throw new UnsupportedOperationException("En construcción.");
+        if (num < 0) {
+            return -num;
+        }
+        return num;
     }
 
     /**
