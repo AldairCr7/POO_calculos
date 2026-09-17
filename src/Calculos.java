@@ -45,7 +45,17 @@ public class Calculos {
      * @return cantidad de vocales
      */
     int vocales(String texto) {
-        throw new UnsupportedOperationException("En construcción.");
+        if (texto == null) {
+            return 0;
+        }
+        int contador = 0;
+        texto = texto.toLowerCase();
+        for (int i = 0; i < texto.length(); i++) {
+            if ("aeiou".indexOf(texto.charAt(i)) != -1) {
+                contador++;
+            }
+        }
+        return contador;
     }
 
     /**
